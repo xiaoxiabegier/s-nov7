@@ -9,7 +9,7 @@ export default async function handler(req, res) {
 
     const paths = await getDocs(unpaidCol).then( snapshot => {
         let returnArray = []
-        snapshot.forEach(currentItem => returnArray.push({params: {href: currentItem.get("href"), propertyID: currentItem.get("propertyID"), clientSecret: currentItem.get("clientSecret"), amount: currentItem.get("amount")}}));
+        snapshot.forEach(currentItem => returnArray.push({params: {href: currentItem.get("href")}}));
         return returnArray
  })
     res.status(200).json(paths)

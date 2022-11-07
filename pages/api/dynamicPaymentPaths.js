@@ -13,6 +13,6 @@ export default async function handler(req, res) {
         return returnArray
  })
     res.status(200).json(paths)
-
+//
 
 }
